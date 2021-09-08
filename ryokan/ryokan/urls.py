@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import ryokan_app.views as views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("top/", views.TopView.as_view()),
+
 ]
